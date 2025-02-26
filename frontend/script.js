@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById("modal-actors").textContent = movieDetails.actors.join(", ");
         document.getElementById("modal-duration").textContent = movieDetails.duration;
         document.getElementById("modal-country").textContent = movieDetails.countries.join(", ");
-        document.getElementById("modal-box-office").textContent = movieDetails.worldwide_gross_income || "Non disponible";
         document.getElementById("modal-description").textContent = movieDetails.long_description || "Pas de description";
 
         // Afficher le modal
@@ -167,3 +166,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
 
 });
+
+
+// document.getElementById("modal-box-office").textContent = movieDetails.worldwide_gross_income || "Non disponible";
