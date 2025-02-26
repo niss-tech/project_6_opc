@@ -1,0 +1,224 @@
+.header{
+    background-color: #68777E;
+    height: 80px;
+    color: white;
+    margin: 40px;
+    text-align: center;
+}
+
+.card {
+    padding: 30px;
+    width: 88%;
+    margin: 50px;
+    border: 5px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-img {
+    width: 150px; 
+    height: auto;
+    margin-right: 20px; 
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .card-btn {
+    padding: 10px 20px;
+    background-color: #ff0400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 144px;
+  }
+  
+  .card-btn:hover {
+    background-color: white; 
+  }
+
+/* ===== LISTE DES FILMS ===== */
+.film-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ===== FILM CARD ===== */
+.film-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image des films */
+.film-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== OVERLAY (bande noire au milieu) ===== */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 60px; 
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+/* Titre du film */
+.film-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Bouton détails */
+.details-btn {
+    background-color: #3e3636;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.details-btn:hover {
+    background-color: white;
+    color: 3e3636
+}
+
+/* ===== MENU DÉROULANT ===== */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Modal général */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenu du modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row; /* Texte à gauche, image à droite */
+    align-items: flex-start;
+    border: 3px solid black;
+    height: 636px;
+    overflow-y: auto;
+}
+
+/* Texte à gauche */
+.modal-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Image à droite */
+.modal-content img {
+    width: 200px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+/* Style du bouton "Fermer" */
+#close-modal {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 93px;
+    margin-left: 291px;
+}
+
+#close-modal:hover {
+    background-color: darkred;
+}
+
+
+
+ 
+
+
+
