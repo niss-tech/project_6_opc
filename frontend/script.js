@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById("modal-duration").textContent = movieDetails.duration;
         document.getElementById("modal-country").textContent = movieDetails.countries.join(", ");
         document.getElementById("modal-description").textContent = movieDetails.long_description || "Pas de description";
+        document.getElementById("modal-box-office").textContent = movieDetails.worldwide_gross_income || "Non disponible";
 
         // Afficher le modal
         modal.style.display = "flex";
@@ -164,8 +165,14 @@ document.addEventListener("DOMContentLoaded", async function () {
             openModal(movieId);
         }
     });
-
+    
+    function showMoreMovies() {
+        const hiddenMovies = document.querySelectorAll('.film-card:nth-child(n+3)');
+        hiddenMovies.forEach(movie => movie.style.display = 'block'); 
+        document.querySelector('.show-more-btn').style.display = 'none'; // Cache le bouton après clic
+    }
+    
+    
 });
 
 
-// document.getElementById("modal-box-office").textContent = movieDetails.worldwide_gross_income || "Non disponible";

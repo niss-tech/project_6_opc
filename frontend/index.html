@@ -10,19 +10,20 @@
 <!-- MODAL -->
 <div id="modal" class="modal">
     <div class="modal-content">
-        <div class="modal-text"> <!-- Texte à gauche -->
+        <div class="modal-text"> *
             <h1 id="modal-title"></h1>
             <p><strong>Année - Genre :</strong> <span id="modal-genres"></span></p>
             <p><strong>Classification :</strong> <span id="modal-rated"></span></p>
             <p><strong>Durée :</strong> <span id="modal-duration"></span> min</p>
             <p><strong>IMDB Score :</strong> <span id="modal-score"></span></p>
+            <p><strong>Recettes :</strong> <span id="modal-box-office"></span></p>
             <p><strong>Réalisateur :</strong> <span id="modal-director"></span></p>
             <p><strong>Avec :</strong> <span id="modal-actors"></span></p>
             <p><strong>Pays :</strong> <span id="modal-country"></span></p>
             <p><strong>Résumé :</strong> <span id="modal-description"></span></p>
             <button id="close-modal">Fermer</button>
         </div>
-        <img id="modal-img" src="" alt="Affiche du film"> <!-- Image à droite -->
+        <img id="modal-img" src="" alt="Affiche du film"> 
     </div>
 </div>
 
@@ -50,6 +51,8 @@
     </section>
     
     <div id="categories"></div>
+    <button class="show-more-btn" onclick="showMoreMovies()">Voir plus</button>
+
     
     
 
@@ -63,7 +66,6 @@
         <div class="dropdown">
             <button class="dropdown-btn">Sélectionner une catégorie</button>
             <div class="dropdown-content" id="dropdown-content">
-                <!-- Les options seront générées en JavaScript -->
             </div>
         </div>
     </section>
@@ -81,5 +83,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-<!-- <p><strong>Recettes :</strong> <span id="modal-box-office"></span></p> -->

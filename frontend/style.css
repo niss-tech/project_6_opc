@@ -217,7 +217,48 @@
 
 
 
- 
+ /* ===== AFFICHAGE RESPONSIVE ===== */
+
+/* TABLETTE : Affiche 4 films, cache les 2 derniers */
+@media screen and (max-width: 1024px) {
+    .film-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 films par ligne */
+    }
+
+    .film-card:nth-child(n+5) { /* Cache les films 5 et 6 */
+        display: none;
+    }
+}
+
+/* MOBILE : Affiche 2 films, cache les 4 autres */
+@media screen and (max-width: 768px) {
+    .film-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 film par ligne */
+    }
+
+    .film-card:nth-child(n+3) { /* Cache les films 3 à 6 */
+        display: none;
+    }
+
+    /* Ajout du bouton "Voir plus" */
+    .show-more-btn {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #ff0400;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .show-more-btn:hover {
+        background-color: darkred;
+    }
+}
+
 
 
 
