@@ -1,18 +1,31 @@
-.DS_Store
-__MACOSX
-
-env/
-.env
-venv/
-.venv/
-
-__pycache__/
-*.pyc 
-
-.vscode/
-.idea/
-
+# Ignorer le backend (API) et les données locales
+OCMovies-API-EN-FR/
+data/
 db.sqlite3
 
-.coverage
-.pytest*
+# Ignorer les fichiers de dépendances
+node_modules/
+env/
+__pycache__/
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers générés automatiquement
+*.log
+*.pyc
+*.pyo
+
+# Ignorer le dossier du serveur SCSS si utilisé
+.sass-cache/
+
+# Garder seulement les fichiers nécessaires du frontend :
+# - Fichiers de configuration npm
+# - Fichiers du frontend
+!.gitignore
+!package.json
+!package-lock.json
+!index.html
+!frontend/
+!README.md
