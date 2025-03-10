@@ -2,14 +2,15 @@
     background-color: #68777E;
     height: 80px;
     color: white;
-    margin: 40px;
     text-align: center;
+}
+
+body {
+    margin: 30px;
 }
 
 .card {
     padding: 30px;
-    width: 88%;
-    margin: 50px;
     border: 5px solid black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -43,11 +44,11 @@
   }
   
   .card-btn {
-    padding: 10px 20px;
+    padding: 13px 20px;
     background-color: #ff0400;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 17px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
@@ -122,10 +123,24 @@
 
 .details-btn:hover {
     background-color: white;
-    color: 3e3636
+    color: #3e3636;
 }
 
 /* ===== MENU DÉROULANT ===== */
+
+.dropdown-css {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdown-btn {
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: white;
+
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -219,46 +234,50 @@
 
  /* ===== AFFICHAGE RESPONSIVE ===== */
 
-/* TABLETTE : Affiche 4 films, cache les 2 derniers */
-@media screen and (max-width: 1024px) {
-    .film-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 films par ligne */
-    }
-
-    .film-card:nth-child(n+5) { /* Cache les films 5 et 6 */
-        display: none;
-    }
+ .show-more-btn {
+    display: block;
+    width: 80%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #ff0400;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* MOBILE : Affiche 2 films, cache les 4 autres */
-@media screen and (max-width: 768px) {
-    .film-list {
-        grid-template-columns: repeat(1, 1fr); /* 1 film par ligne */
-    }
+.show-more-btn:hover {
+    background-color: #ff0400;
+}
 
-    .film-card:nth-child(n+3) { /* Cache les films 3 à 6 */
-        display: none;
-    }
-
-    /* Ajout du bouton "Voir plus" */
+/* PC: masquer le bouton */
+@media (min-width: 1025px) {
     .show-more-btn {
-        display: block;
-        text-align: center;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #ff0400;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .show-more-btn:hover {
-        background-color: darkred;
+        display: none !important;
     }
 }
 
+/* Mobile : structure responsive */
+@media (max-width: 767px) {
+    .film-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 colonne par ligne */
+    }
+}
 
+/* Tablette : structure responsive */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .film-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes par ligne */
+    }
+}
 
+/* Desktop : structure responsive */
+@media (min-width: 1025px) {
+    .film-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes par ligne */
+    }
+}
 
