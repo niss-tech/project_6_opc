@@ -1,7 +1,7 @@
 
 # JustStreamIt
 
-## 📄 Description
+## Description
 **JustStreamIt** est une application web permettant de consulter des informations sur des films. L'application utilise une API REST locale (**OCMovies-API**) pour fournir des données cinématographiques en temps réel. Les utilisateurs peuvent afficher le meilleur film, explorer les films les mieux notés, filtrer par catégorie et afficher les détails de chaque film via une interface responsive et interactive.
 
 ---
@@ -100,11 +100,11 @@ L'API **OCMovies** fournit des points d'entrée pour consulter les films :
 - **Obtenir les films les mieux notés**  
 ➡ `http://localhost:8000/api/v1/titles?sort_by=-imdb_score`  
 
-- 🎭 **Obtenir les films par genre**  
+- **Obtenir les films par genre**  
 ➡ `http://localhost:8000/api/v1/titles?genre=Action`  
 
-- 📝 **Obtenir les détails d'un film**  
-➡️ `http://localhost:8000/api/v1/titles/{id}`  
+- **Obtenir les détails d'un film**  
+➡ `http://localhost:8000/api/v1/titles/{id}`  
 
 ---
 
